@@ -1,0 +1,27 @@
+.slider {
+    height: 100vh;
+    width: 100%;
+    &__layer {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        will-change: transform;
+        // transition: var(--transition-slider) !important;
+    }
+    &__layer::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        box-shadow: inset 0 0 250px rgb(0 0 0 / .3);
+    }
+    &__item {
+        overflow: hidden;
+    }
+    &__wrapper {
+        will-change: transform;
+        transform-style: preserve-3d;
+        // transition: var(--transition-slider) !important;
+    }
+}
